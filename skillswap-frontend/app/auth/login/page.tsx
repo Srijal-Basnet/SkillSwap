@@ -20,7 +20,7 @@ export default function LoginPage() {
       return;
     }
     try {
-      const res = await fetch("https://skillswapservice.up.railway.app/login", {
+      const res = await fetch("https://skillswap-production-8664.up.railway.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

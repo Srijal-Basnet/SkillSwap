@@ -119,7 +119,7 @@ export default function CreatePostPage() {
         images.forEach(image => form.append("images", image));
 
         try {
-            const res = await fetch("https://skillswapservice.up.railway.app/posts", {
+            const res = await fetch("https://skillswap-production-8664.up.railway.app/posts", {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`

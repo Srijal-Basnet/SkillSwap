@@ -21,7 +21,7 @@ export default function OrdersPanel({ token, currentUserId }: { token: string, c
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
   const [deliverModalFor, setDeliverModalFor] = useState<Order | null>(null);
-  const API = "https://skillswapservice.up.railway.app";
+  const API = "https://skillswap-production-8664.up.railway.app";
 
   const fetchOrders = async () => {
     if (!token) return;
@@ -84,7 +84,7 @@ export default function OrdersPanel({ token, currentUserId }: { token: string, c
                   {o.seller_delivered_files && o.seller_delivered_files.length > 0 && (
                     <div className="mt-2 flex flex-wrap gap-2">
                       {o.seller_delivered_files.map((f, i) => (
-                        <a key={i} href={`https://skillswapservice.up.railway.app/${f}`} target="_blank" rel="noreferrer" className="text-xs text-blue-600 underline">
+                        <a key={i} href={`https://skillswap-production-8664.up.railway.app/${f}`} target="_blank" rel="noreferrer" className="text-xs text-blue-600 underline">
                           Deliverable {i+1}
                         </a>
                       ))}

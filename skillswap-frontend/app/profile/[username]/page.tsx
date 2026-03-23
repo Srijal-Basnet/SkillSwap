@@ -16,7 +16,7 @@ export default function PublicProfilePage() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    const API_URL = "https://skillswapservice.up.railway.app";
+    const API_URL = "https://skillswap-production-8664.up.railway.app";
 
     useEffect(() => {
         if (username) {

@@ -46,7 +46,7 @@ export default function DashboardPage() {
     if (!token) { setLoading(false); return; }
     const fetchConversations = async () => {
       try {
-        const res = await fetch('https://skillswapservice.up.railway.app/conversations', {
+        const res = await fetch('https://skillswap-production-8664.up.railway.app/conversations', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await res.json();
@@ -70,7 +70,7 @@ export default function DashboardPage() {
       setLoadingPosts(true);
       setPostsError(null);
       try {
-        const res = await fetch('https://skillswapservice.up.railway.app/posts/mine', {
+        const res = await fetch('https://skillswap-production-8664.up.railway.app/posts/mine', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (!res.ok) {
@@ -245,7 +245,7 @@ export default function DashboardPage() {
                       rating: post.average_rating,
                       reviews: post.total_comments,
                       price: post.price,
-                      image: post.images?.[0] ? `https://skillswapservice.up.railway.app/${post.images[0]}` : null,
+                      image: post.images?.[0] ? `https://skillswap-production-8664.up.railway.app/${post.images[0]}` : null,
                       seller_profile_picture: post.profile_picture_url
                     }}
                   />

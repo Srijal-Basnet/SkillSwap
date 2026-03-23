@@ -54,7 +54,7 @@ export default function EditPortfolioModal({ isOpen, onClose, onSave, onDelete, 
 
         try {
             const token = localStorage.getItem("token");
-            const res = await fetch("https://skillswapservice.up.railway.app/profile/portfolio/upload", {
+            const res = await fetch("https://skillswap-production-8664.up.railway.app/profile/portfolio/upload", {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${token}`,

@@ -15,7 +15,7 @@ type Proposal = {
 export default function SellerProposalsPanel({ token, onOrderCreated }: { token: string, onOrderCreated?: () => void }) {
   const [proposals, setProposals] = useState<Proposal[]>([]);
   const [loading, setLoading] = useState(true);
-  const API = "https://skillswapservice.up.railway.app";
+  const API = "https://skillswap-production-8664.up.railway.app";
 
   const fetchProposals = async () => {
     if (!token) return;
@@ -94,7 +94,7 @@ export default function SellerProposalsPanel({ token, onOrderCreated }: { token:
                   {p.files && p.files.length > 0 && (
                     <div className="mt-2 flex flex-wrap gap-2">
                       {p.files.map((f, i) => (
-                        <a key={i} href={`https://skillswapservice.up.railway.app/${f}`} target="_blank" rel="noreferrer" className="text-xs text-blue-600 underline">
+                        <a key={i} href={`https://skillswap-production-8664.up.railway.app/${f}`} target="_blank" rel="noreferrer" className="text-xs text-blue-600 underline">
                           Attachment {i+1}
                         </a>
                       ))}

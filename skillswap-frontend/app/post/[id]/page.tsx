@@ -44,7 +44,7 @@ export default function PostPage() {
 
     const fetchPost = async () => {
       try {
-        const res = await fetch(`https://skillswapservice.up.railway.app/posts/${postId}`);
+        const res = await fetch(`https://skillswap-production-8664.up.railway.app/posts/${postId}`);
         const data = await res.json();
         setSingleService(data);
       } catch (err) {
@@ -65,7 +65,7 @@ export default function PostPage() {
       if (!postId) return;
 
       try {
-        const res = await fetch(`https://skillswapservice.up.railway.app/comments/${postId}`, {
+        const res = await fetch(`https://skillswap-production-8664.up.railway.app/comments/${postId}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           }
@@ -101,7 +101,7 @@ export default function PostPage() {
   const submitComment = async () => {
     if (!commentInput || ratingInput < 1) return;
     try {
-      const res = await fetch(`https://skillswapservice.up.railway.app/comments/${postId}`, {
+      const res = await fetch(`https://skillswap-production-8664.up.railway.app/comments/${postId}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` },
         body: JSON.stringify({ comment: commentInput, rating: ratingInput }),
@@ -212,7 +212,7 @@ export default function PostPage() {
                   {singleService.images.map((img: string, index: number) => (
                     <img
                       key={index}
-                      src={`https://skillswapservice.up.railway.app/${img}`}
+                      src={`https://skillswap-production-8664.up.railway.app/${img}`}
                       alt={`Image ${index + 1}`}
                       className="h-60 w-80 md:h-[400px] md:w-[600px] flex-shrink-0 rounded-lg object-cover shadow-sm"
                     />

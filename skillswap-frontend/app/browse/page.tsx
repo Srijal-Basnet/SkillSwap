@@ -32,7 +32,7 @@ export default function BrowseServicesPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch("https://skillswapservice.up.railway.app/posts");
+        const res = await fetch("https://skillswap-production-8664.up.railway.app/posts");
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const data = await res.json();
         if (Array.isArray(data)) {
@@ -252,7 +252,7 @@ export default function BrowseServicesPage() {
                         rating: service.average_rating,
                         reviews: service.total_comments,
                         price: service.price,
-                        image: service.images?.[0] ? `https://skillswapservice.up.railway.app/${service.images[0]}` : null,
+                        image: service.images?.[0] ? `https://skillswap-production-8664.up.railway.app/${service.images[0]}` : null,
                         seller_profile_picture: service.profile_picture_url
                       }}
                     />

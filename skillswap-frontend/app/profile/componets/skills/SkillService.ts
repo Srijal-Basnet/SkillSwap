@@ -1,4 +1,4 @@
-const API_URL = "https://skillswapservice.up.railway.app";
+const API_URL = "https://skillswap-production-8664.up.railway.app";
 
 export interface Skill {
   id: number;

@@ -28,7 +28,7 @@ export default function SkillSwapProfile() {
     const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null);
 
     const token = typeof window !== 'undefined' ? localStorage.getItem('token') || '' : '';
-    const API_URL = "https://skillswapservice.up.railway.app";
+    const API_URL = "https://skillswap-production-8664.up.railway.app";
 
     useEffect(() => {
         if (!token) {
